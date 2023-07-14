@@ -7,6 +7,7 @@ import axios from 'axios';
 
 export default function WeatherMain(props) {
   const [weather, setWeather] = useState({loaded: false});
+  const [city, setCity] = useState(props.city);
 
   function handleResponse(response) {
     console.log(response.data);
@@ -24,13 +25,27 @@ export default function WeatherMain(props) {
     });
   }
 
+  function search() {
+    let url = `https://api.openweathermap.org/data/2.5/weather?q=${city}&appid=a0776b8bb0b1556bee1e5658c3acf0c4&units=metric`;
+    axios.get(url).then(handleResponse)
+  }
+
+  function handleSubmit(event) {
+    event.preventDefault();
+    search();
+  }
+
+  function handleCitySearch(event) {
+    setCity(event.target.value);
+  }
+
   if (weather.loaded) {
     return (
       
       <div className="row">
         <div className="col-4">
-          <form id="citySearch">
-            <input id="cityInput" type="search" placeholder="Enter a city" />
+          <form id="citySearch" onSubmit={handleSubmit}>
+            <input id="cityInput" type="search" placeholder="Enter a city" onChange={handleCitySearch} />
             <input type="submit" value="search" className="button" />
           </form>
         </div>  
@@ -41,11 +56,7 @@ export default function WeatherMain(props) {
     );
 
   } else {
-    let city = "Toronto";
-    let url = `https://api.openweathermap.org/data/2.5/weather?q=${city}&appid=a0776b8bb0b1556bee1e5658c3acf0c4&units=metric`;
-    axios.get(url).then(handleResponse)
-
+    search();
     return "Loading..."
-
   }
 }
