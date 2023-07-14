@@ -16,7 +16,7 @@ export default function WeatherMain(props) {
       loaded: true,
       date: new Date(response.data.dt * 1000), 
       city: response.data.name,
-      iconUrl: `https://openweathermap.org/img/wn/${response.data.weather[0].icon}.png`,
+      icon: response.data.weather[0].icon,
       temp: response.data.main.temp,
       desc: response.data.weather[0].description,
       feel: response.data.main.feels_like,

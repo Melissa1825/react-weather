@@ -4,6 +4,7 @@ import { faWind } from '@fortawesome/free-solid-svg-icons'
 import { faDroplet } from '@fortawesome/free-solid-svg-icons'
 
 import Date from './Date';
+import WeatherIcon from './WeatherIcon';
 
 export default function WeatherData(props) {
     return (
@@ -22,7 +23,8 @@ export default function WeatherData(props) {
     </div>
 
         <div>
-          <img id="icon" src={props.data.iconUrl} alt={props.data.description} />
+            <WeatherIcon code={props.data.icon} alt={props.data.description} />
+        
           <div className="temp">
             <h1>{Math.round(props.data.temp)}</h1>
             <span className="deg">°C</span>
