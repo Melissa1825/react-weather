@@ -22,7 +22,7 @@ export default function WeatherData(props) {
     </div>
 
         <div>
-          <img id="icon" src="http://shecodes-assets.s3.amazonaws.com/api/props/icons/few-clouds-day.png" alt="haze img" />
+          <img id="icon" src={props.data.iconUrl} alt={props.data.description} />
           <div className="temp">
             <h1>{Math.round(props.data.temp)}</h1>
             <span className="deg">°C</span>
