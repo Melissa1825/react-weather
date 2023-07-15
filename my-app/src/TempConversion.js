@@ -20,14 +20,14 @@ export default function TempConversion(props) {
 
     if (unit === 'celcius') {
     return (
-    <div>
+    <div className='mainTemp'>
         <h1>{Math.round(props.celcius)}</h1>
         <span className="deg">°C | <a href='#' onClick={farTemp}>°F</a></span>
     </div>
     );
     } else {
         return (
-            <div>
+            <div className='mainTemp'>
                 <h1>{Math.round(farenheight())}</h1>
                 <span className="deg"><a href='#' onClick={celTemp}>°C</a> | °F</span>
             </div>

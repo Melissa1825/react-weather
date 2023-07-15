@@ -15,13 +15,12 @@ export default function WeatherData(props) {
         </h6>
 
         <div className="locationIcon">
-        <div>
-            <FontAwesomeIcon className="fa-solid" icon={faLocationDot} />
-        </div>
-        <div>
+            <div>
+            <FontAwesomeIcon className="fa-solid, locationDot" size='lg' icon={faLocationDot} />
+            </div>
             <h4>{props.data.city}</h4>
         </div>
-    </div>
+    
 
         <div>
             <WeatherIcon code={props.data.icon} alt={props.data.description} />

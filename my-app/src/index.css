@@ -11,15 +11,18 @@ h6 {
   padding-bottom: 30px;
 }
 
+.locationIcon,
 .temp,
+.mainTemp,
 .realFeel {
   display: flex;
   justify-content: center;
 }
 
-.fa-location-dot {
-  margin: 6px;
+h4 {
+  padding-left: 10px;
 }
+
 
 h3 {
   padding-bottom: 20px;
