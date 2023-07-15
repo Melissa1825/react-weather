@@ -5,6 +5,7 @@ import { faDroplet } from '@fortawesome/free-solid-svg-icons'
 
 import Date from './Date';
 import WeatherIcon from './WeatherIcon';
+import TempConversion from './TempConversion';
 
 export default function WeatherData(props) {
     return (
@@ -26,9 +27,9 @@ export default function WeatherData(props) {
             <WeatherIcon code={props.data.icon} alt={props.data.description} />
         
           <div className="temp">
-            <h1>{Math.round(props.data.temp)}</h1>
-            <span className="deg">°C</span>
+          <TempConversion celcius={props.data.temp}/>
           </div>
+
             <h3>{props.data.desc}</h3>
           </div>
 
