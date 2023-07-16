@@ -2,6 +2,7 @@ import React, { useState } from 'react';
 import "./index.css";
 
 import WeatherData from './WeatherData';
+import MultiDay from './MultiDay';
 
 import axios from 'axios';
 
@@ -22,6 +23,7 @@ export default function WeatherMain(props) {
       feel: response.data.main.feels_like,
       wind: response.data.wind.speed,
       humid: response.data.main.humidity,
+      coord: response.data.coord,
     });
   }
 
@@ -51,6 +53,9 @@ export default function WeatherMain(props) {
         </div>  
 
         <WeatherData data = {weather} />
+        <hr/>
+
+        <MultiDay  coord = {weather.coord}/>
     
       </div>
     );

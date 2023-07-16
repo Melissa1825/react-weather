@@ -5,7 +5,6 @@ import ReactDOM from 'react-dom/client';
 import './index.css';
 
 import WeatherMain from './WeatherMain';
-import MultiDay from './MultiDay';
 
 import reportWebVitals from './reportWebVitals';
 
@@ -14,8 +13,6 @@ root.render(
   <React.StrictMode>
     <div className='container'>
     <WeatherMain city="Toronto" />
-    <hr></hr>
-    <MultiDay />
     </div>
     
     <div className='codeLink'>
