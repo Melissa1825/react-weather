@@ -1,4 +1,5 @@
 import React, {useState} from 'react';
+import './index';
 
 export default function TempConversion(props) {
     const [unit, setUnit] = useState('celcius');

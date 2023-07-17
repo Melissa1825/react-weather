@@ -47,7 +47,7 @@ export default function WeatherData(props) {
           <div className="col-4"></div>
           <div className="col-2">
             <li>
-            <FontAwesomeIcon className="fa-solid" icon={faWind} />
+            <FontAwesomeIcon className="fa-solid, windIcon" icon={faWind} />
               <span>{props.data.wind}</span> <span>km/h</span>
               <p>Wind</p>
             </li>
@@ -55,7 +55,7 @@ export default function WeatherData(props) {
 
           <div className="col-2">
             <li>
-            <FontAwesomeIcon className="fa-solid" icon={faDroplet} />
+            <FontAwesomeIcon className="fa-solid, humidIcon" icon={faDroplet} />
               <span>{props.data.humid}</span> <span>%</span>
               <p>Humidity</p>
             </li>

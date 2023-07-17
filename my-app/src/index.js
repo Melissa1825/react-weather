@@ -16,7 +16,7 @@ root.render(
     </div>
     
     <div className='codeLink'>
-    <span><a href='https://github.com/Melissa1825/react-weather-app' target='_blank' rel='noreferrer'>Open-source code</a>, by Melissa</span>
+    <span><a className='links' href='https://github.com/Melissa1825/react-weather' target='_blank' rel='noreferrer'>Open-source code</a>, by <a className='links' href='https://brilliant-sunburst-e63ebf.netlify.app/' target='_blank' rel='noreferrer'>Melissa Dubreuil</a></span>
     </div>
   </React.StrictMode>
 );
