@@ -25,7 +25,6 @@ export default function MultiDay(props) {
     }
 
     if (loaded) {
-        console.log(forecast);
         return (
             <div className="multiDay">
                 <div className="row">
@@ -40,7 +39,6 @@ export default function MultiDay(props) {
                             return null;
                         }
                     })}
-                    
                 </div>   
             </div>  
         );
