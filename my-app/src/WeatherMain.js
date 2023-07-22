@@ -43,9 +43,9 @@ export default function WeatherMain(props) {
 
   if (weather.loaded) {
     return (
-      
+  
       <div className="row">
-        <div className="col-4">
+        <div className="col-md-4">
           <form id="citySearch" onSubmit={handleSubmit}>
             <input id="cityInput" type="search" placeholder="Enter a city" onChange={handleCitySearch} />
             <input type="submit" value="search" className="button" />
